@@ -1,0 +1,7 @@
+@tailwind utilities;
+
+@layer utilities {
+  .text-mono {
+    word-spacing: -2px !important;
+  }
+}
