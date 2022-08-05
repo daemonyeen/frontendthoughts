@@ -3,7 +3,7 @@ import { toggleDarkMode } from '../lib/dark-mode';
 import Link from 'next/link';
 
 const MainMenuIcons = () => {
-  const iconClassName = 'text-gray-400 hover:text-rose-500 cursor-pointer';
+  const iconClassName = 'text-gray-400 hover:text-rose-400 cursor-pointer';
 
   return (
     <ul className="flex items-center space-x-4 text-xl list-none">
