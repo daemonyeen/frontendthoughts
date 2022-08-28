@@ -67,7 +67,7 @@
         @apply font-medium;
     }
 
-    img {
+    img, iframe {
         @apply block w-full rounded-lg;
     }
 }
