@@ -6,11 +6,9 @@ export type PostTitleProps = Readonly<{
 
 const PostTitle = ({ date, children }: PropsWithChildren<PostTitleProps>) => {
   return (
-    <div className="mt-10 mb-8">
-      <h1 className="font-mono text-mono text-2xl text-rose-400 dark:text-amber-400">{children}</h1>
-      <div className="font-mono text-mono text-sm text-gray-500 dark:text-gray-400 mt-1">
-        {date}
-      </div>
+    <div className="mt-12 mb-8">
+      <div className="text-sm text-gray-500 pb-2">{date}</div>
+      <h1 className="font-bold text-3xl sm:text-4xl text-gray-700">{children}</h1>
     </div>
   );
 };

@@ -1,26 +1,29 @@
-import { FiGithub, FiMoon, FiRss } from 'react-icons/fi';
-import { toggleDarkMode } from '../lib/dark-mode';
 import Link from 'next/link';
+import { TbBrandGithub, TbBrandTelegram, TbRss } from 'react-icons/tb';
 
 const MainMenuIcons = () => {
-  const iconClassName = 'text-gray-400 hover:text-rose-400 cursor-pointer';
+  const iconClassName = 'text-gray-200 cursor-pointer';
 
   return (
-    <ul className="flex items-center space-x-4 text-xl list-none">
+    <ul className="flex items-center space-x-6 text-2xl pb-12 sm:pb-0 list-none">
       <li>
-        <FiMoon className={`${iconClassName} cursor-pointer`} onClick={toggleDarkMode}></FiMoon>
-      </li>
-      <li>
-        <Link href="https://github.com/daemonyeen" passHref>
+        <Link href="https://t.me/+2m-x-jQNU-E0NGMy" passHref>
           <a target="_blank">
-            <FiGithub className={iconClassName}></FiGithub>
+            <TbBrandTelegram className={iconClassName}></TbBrandTelegram>
           </a>
         </Link>
       </li>
       <li>
-        <Link href="#" passHref>
+        <Link href="https://github.com/daemonyeen" passHref>
           <a target="_blank">
-            <FiRss className={iconClassName}></FiRss>
+            <TbBrandGithub className={iconClassName}></TbBrandGithub>
+          </a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/rss/feed.xml" passHref>
+          <a target="_blank">
+            <TbRss className={iconClassName}></TbRss>
           </a>
         </Link>
       </li>

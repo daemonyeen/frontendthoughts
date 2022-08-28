@@ -3,22 +3,27 @@ import matter from 'gray-matter';
 import md from 'markdown-it';
 import { NextPage } from 'next';
 import MainWrapper from '../../components/MainWrapper';
-import { PostMetadata } from '../../lib/types/posts';
+import { MarkdownMetadata } from '../../lib/types/posts';
 import PostTitle from '../../components/PostTitle';
 import TopBar from '../../components/TopBar';
 
 type PostProps = Readonly<{
-  data: PostMetadata['data'];
+  data: MarkdownMetadata['data'];
   content: string;
 }>;
 
 const PostPage: NextPage<PostProps> = ({ data, content }) => {
   return (
-    <MainWrapper>
+    <>
       <TopBar></TopBar>
-      <PostTitle date={data.date}>{data.title}</PostTitle>
-      <div className="markdown" dangerouslySetInnerHTML={{ __html: md().render(content) }} />
-    </MainWrapper>
+      <MainWrapper>
+        <PostTitle date={data.date}>{data.title}</PostTitle>
+        <div
+          className="typography pb-20"
+          dangerouslySetInnerHTML={{ __html: md({ html: true }).render(content) }}
+        />
+      </MainWrapper>
+    </>
   );
 };
 

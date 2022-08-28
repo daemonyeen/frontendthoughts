@@ -8,11 +8,11 @@ const MainMenu = () => {
     },
     {
       name: 'Сниппеты',
-      link: '#',
+      link: '/snippets',
     },
     {
       name: 'Обо мне',
-      link: '#',
+      link: '/about',
     },
     {
       name: 'Проекты',
@@ -23,9 +23,9 @@ const MainMenu = () => {
   return (
     <ul className="flex items-center space-x-6 list-none">
       {links.map((link) => (
-        <li className="font-mono text-gray-700 dark:text-gray-300" key={link.name}>
+        <li key={link.name}>
           <Link href={link.link} passHref>
-            <a className="font-medium hover:underline">{link.name}</a>
+            <a className="text-gray-200 hover:underline">{link.name}</a>
           </Link>
         </li>
       ))}
