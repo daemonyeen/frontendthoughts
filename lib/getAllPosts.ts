@@ -17,5 +17,9 @@ export function getAllPosts(): MarkdownMetadata[] {
     } as MarkdownMetadata;
   });
 
+  posts.sort((a, b) => {
+    return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+  });
+
   return posts;
 }
