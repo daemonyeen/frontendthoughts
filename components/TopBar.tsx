@@ -15,7 +15,7 @@ export const TopBar = () => {
 
           <div className="text-center sm:text-left">
             <Link href="/" passHref>
-              <a className="font-bold text-3xl uppercase text-gray-200">Хаскикодинг</a>
+              <a className="font-bold text-3xl uppercase text-gray-100">Хаскикодинг</a>
             </Link>
             <div className="text-sm text-gray-200">Блог F5 примата о жизни и разработке</div>
           </div>

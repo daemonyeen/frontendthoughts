@@ -6,6 +6,7 @@ import MainWrapper from '../../components/MainWrapper';
 import { MarkdownMetadata } from '../../lib/types/posts';
 import PostTitle from '../../components/PostTitle';
 import TopBar from '../../components/TopBar';
+import Head from 'next/head';
 
 type PostProps = Readonly<{
   data: MarkdownMetadata['data'];
@@ -15,6 +16,9 @@ type PostProps = Readonly<{
 const PostPage: NextPage<PostProps> = ({ data, content }) => {
   return (
     <>
+      <Head>
+        <title>Хаскикодинг / {data.title}</title>
+      </Head>
       <TopBar></TopBar>
       <MainWrapper>
         <PostTitle date={data.date}>{data.title}</PostTitle>

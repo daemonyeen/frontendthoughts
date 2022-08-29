@@ -5,6 +5,7 @@ import PostListItem from '../components/PostListItem';
 import MainWrapper from '../components/MainWrapper';
 import { getAllPosts } from '../lib/getAllPosts';
 import generateRssFeed from '../lib/generateRssFeed';
+import Head from 'next/head';
 
 type HomeProps = Readonly<{
   posts: MarkdownMetadata[];
@@ -13,6 +14,9 @@ type HomeProps = Readonly<{
 const Home: NextPage<HomeProps> = ({ posts }: HomeProps) => {
   return (
     <>
+      <Head>
+        <title>Хаскикодинг — блог F5 примата о жизни и разработке</title>
+      </Head>
       <TopBar></TopBar>
 
       <MainWrapper>
