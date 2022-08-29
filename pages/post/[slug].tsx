@@ -18,6 +18,7 @@ const PostPage: NextPage<PostProps> = ({ data, content }) => {
     <>
       <Head>
         <title>Хаскикодинг / {data.title}</title>
+        <meta name="description" content={data.excerpt} />
       </Head>
       <TopBar></TopBar>
       <MainWrapper>
