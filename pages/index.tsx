@@ -20,7 +20,7 @@ const Home: NextPage<HomeProps> = ({ posts }: HomeProps) => {
       <TopBar></TopBar>
 
       <MainWrapper>
-        <ul className="mt-10">
+        <ul className="mt-10 pb-14">
           {posts.map((post) => (
             <PostListItem {...post} key={post.slug}></PostListItem>
           ))}
